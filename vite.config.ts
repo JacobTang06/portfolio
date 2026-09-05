@@ -3,7 +3,12 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
-import siteConfiguration from './.figma/make/site.json'
+const siteConfiguration: FigmaSiteConfiguration = {
+  description:
+    'Showcase your portfolio with an interactive spinning globe featuring location markers that highlight your bio, projects, skills, and contact info.',
+  robots: { index: false },
+  accessibility: { addBypassLinks: false },
+}
 
 // Vite config — https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
