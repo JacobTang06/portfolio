@@ -4,19 +4,25 @@ interface TechSkillsProps {
 
 const SKILL_GROUPS = [
   {
+    index: "01",
     category: "Languages",
+    accent: "#4dffc3",
     skills: [
       "Java", "Python", "C++", "SQL", "Kotlin", "Bash", "TypeScript",
     ],
   },
   {
+    index: "02",
     category: "Frameworks & Tools",
+    accent: "#ff6b4a",
     skills: [
       "Django", "FastAPI", "Spring Boot", "Datadog", "Docker", "Kubernetes", "Jira", "Git/GitHub", "Terraform",
     ],
   },
   {
+    index: "03",
     category: "Databases",
+    accent: "#8fa7ff",
     skills: [
       "MongoDB", "PostgreSQL", "SQLite",
     ],
@@ -42,58 +48,66 @@ export default function TechSkills({ id }: TechSkillsProps) {
           </h2>
         </div>
 
-        {/* Resume skill groups */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 mb-14 sm:mb-18 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
           {SKILL_GROUPS.map((group) => (
-            <div key={group.category}>
-              <h3
-                className="text-xs font-medium tracking-widest uppercase mb-5 sm:mb-6"
-                style={{ color: "#4dffc3" }}
+            <div
+              key={group.category}
+              className="group relative overflow-hidden min-h-64 p-5 sm:p-6 border transition-transform duration-300 hover:-translate-y-1"
+              style={{
+                background: "linear-gradient(145deg, rgba(13,21,38,0.98), rgba(8,14,27,0.98))",
+                borderColor: `${group.accent}26`,
+              }}
+            >
+              <div
+                className="absolute -right-8 -top-10 text-[8rem] leading-none font-light opacity-[0.035] select-none"
+                style={{ color: group.accent }}
+                aria-hidden="true"
               >
-                {group.category}
-              </h3>
-              <div className="flex flex-col gap-4 sm:gap-5">
-                {group.skills.map((skill) => (
-                  <span key={skill} className="text-sm" style={{ color: "#e8edf5" }}>
-                    {skill}
+                {group.index}
+              </div>
+              <div className="relative flex h-full flex-col">
+                <div className="flex items-start justify-between gap-4 mb-8">
+                  <div>
+                    <h3 className="text-lg sm:text-xl" style={{ fontFamily: '"DM Serif Display", serif', color: "#e8edf5" }}>
+                      {group.category}
+                    </h3>
+                  </div>
+                  <span className="text-xs tabular-nums" style={{ color: "#7a8aaa" }}>
+                    {group.index}
                   </span>
-                ))}
+                </div>
+                <div className="mt-auto flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-1.5 text-xs transition-colors duration-200"
+                      style={{
+                        color: "#cbd4e5",
+                        background: `${group.accent}0d`,
+                        border: `1px solid ${group.accent}20`,
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Technology tag cloud */}
-        <div
-          className="p-6 sm:p-8 rounded-2xl border"
-          style={{ background: "#0d1526", borderColor: "rgba(77,255,195,0.1)" }}
-        >
-          <p className="text-xs tracking-widest uppercase mb-4 sm:mb-6" style={{ color: "#7a8aaa" }}>
-            Full stack
-          </p>
-          <div className="flex flex-wrap gap-2 sm:gap-2.5">
-            {TECHNOLOGY_TAGS.map((tech) => (
-              <span
-                key={tech}
-                className="px-2.5 sm:px-3 py-1.5 rounded-lg text-xs sm:text-sm transition-all duration-200 cursor-default"
-                style={{
-                  background: "rgba(77,255,195,0.04)",
-                  color: "#e8edf5",
-                  border: "1px solid rgba(77,255,195,0.1)",
-                }}
-                onMouseEnter={(e) => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.background = "rgba(77,255,195,0.1)";
-                  el.style.borderColor = "rgba(77,255,195,0.3)";
-                  el.style.color = "#4dffc3";
-                }}
-                onMouseLeave={(e) => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.background = "rgba(77,255,195,0.04)";
-                  el.style.borderColor = "rgba(77,255,195,0.1)";
-                  el.style.color = "#e8edf5";
-                }}
-              >
+        <div className="mt-3 sm:mt-4 border" style={{ background: "#0d1526", borderColor: "rgba(77,255,195,0.1)" }}>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 px-5 py-4 sm:px-6 border-b" style={{ borderColor: "rgba(77,255,195,0.08)" }}>
+            <span className="text-[0.65rem] tracking-[0.24em] uppercase" style={{ color: "#4dffc3" }}>
+              Full stack
+            </span>
+            <span className="hidden sm:block h-px flex-1" style={{ background: "rgba(77,255,195,0.12)" }} />
+            <span className="text-xs" style={{ color: "#7a8aaa" }}></span>
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-3 px-5 py-5 sm:px-6">
+            {TECHNOLOGY_TAGS.map((tech, index) => (
+              <span key={tech} className="inline-flex items-center gap-2 text-xs sm:text-sm" style={{ color: "#aebbd1" }}>
+                <span className="h-1 w-1 rounded-full" style={{ background: index % 3 === 1 ? "#ff6b4a" : "#4dffc3" }} />
                 {tech}
               </span>
             ))}

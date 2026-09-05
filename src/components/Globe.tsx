@@ -15,7 +15,7 @@ const PINS: Pin[] = [
   { id: "experience", label: "Experience",     lat: 40.7, lon: -74 },  // New York
   { id: "projects",   label: "Projects",       lat: 47,  lon: 8    },  // Switzerland
   { id: "skills",     label: "Tech & Skills",  lat: 37,  lon: -120 },  // California
-  { id: "connect",    label: "Let's Connect",  lat: 52,  lon: -1   },  // England
+  { id: "connect",    label: "Let's Connect",  lat: -33.93, lon: 18.42 },  // Cape Town, South Africa
 ];
 
 function latLonToVec3(lat: number, lon: number, radius: number): THREE.Vector3 {
