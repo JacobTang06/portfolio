@@ -1,0 +1,32 @@
+node_modules/
+dist/
+build/
+.cache/
+.DS_Store
+.env*
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+*-debug.log*
+logs/
+*.log
+*.pdf
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+credentials*.json
+secrets*.json
+.claude-replay.*
+.tmp-*
+.figma/
+AGENTS.md
+CLAUDE.md
+
+# Platform-managed agentplat state, not project source. In the
+# client-initiated single-repo workspace layout (make's `Path: "."` spec) the
+# repo root IS the workspace root, so these land inside this repo rather than
+# beside it.
+/.plugins/
+/.opencode-skills/
