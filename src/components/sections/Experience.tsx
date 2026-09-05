@@ -9,7 +9,7 @@ const JOBS = [
     period: "May 2025 — July 2026",
     location: "San Diego, CA",
     description:
-      "Built backend services and test infrastructure for remote patient-device systems, with an emphasis on reliability, observability, and safe schema evolution.",
+      "Built backend services and test infrastructure across a microservices platform handling patient-device data, emphasizing reliability, observability, and schema evolution.",
     highlights: ["Java", "Spring Boot", "MongoDB", "Kubernetes", "Terraform", "Datadog", "AWS"],
   },
   {
@@ -18,7 +18,7 @@ const JOBS = [
     period: "Feb 2025 — May 2025",
     location: "San Diego, CA",
     description:
-      "Built the backend for a mobile social discovery app in a three-person team, launching REST APIs that helped users discover and coordinate bar outings.",
+      "Designed and developed the backend for a mobile social discovery app in a three-person team, launching REST APIs that helped users discover and coordinate bar outings.",
     highlights: ["Python", "Django REST Framework", "PostgreSQL", "REST APIs", "Docker"],
   },
   {

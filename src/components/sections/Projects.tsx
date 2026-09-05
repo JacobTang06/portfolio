@@ -21,6 +21,15 @@ const PROJECTS = [
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&auto=format",
     link: "architecture-diagram.html",
   },
+  {
+    title: "PropertyPal",
+    description:
+      "A Zillow-inspired Android app for browsing listings, filtering searches, saving favorites, and viewing detailed property information.",
+    tags: ["Kotlin", "Android Studio", "XML"],
+    year: "2024",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMS1jfmE3gG3DQKC-gICDWgzbA4K9-UfGHJxremJ0KKNnz3MYCAyteTIg&s=10",
+    link: "https://github.com/JacobTang06/PropertyPal",
+  },
 ];
 
 export default function Projects({ id }: ProjectsProps) {
