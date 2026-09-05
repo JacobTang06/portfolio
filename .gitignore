@@ -10,14 +10,8 @@ vite.config.*.timestamp-*
 *-debug.log*
 logs/
 *.log
-*.pdf
-*.pem
-*.key
-*.p12
-*.pfx
-*.jks
-credentials*.json
-secrets*.json
+credentials*
+secrets*
 .claude-replay.*
 .tmp-*
 .figma/

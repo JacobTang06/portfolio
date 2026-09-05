@@ -39,6 +39,12 @@ jobs:
         env:
           FIGMA_PUBLIC_URL: ${{ steps.pages.outputs.base_path }}
 
+      - name: Include architecture diagram
+        run: cp architecture-diagram.html dist/architecture-diagram.html
+
+      - name: Include resume
+        run: cp JacobTangResume.pdf dist/JacobTangResume.pdf
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

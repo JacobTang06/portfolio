@@ -35,7 +35,7 @@ const LINKS = [
   },
   {
     label: "Resume",
-    href: "/JacobTangResume.pdf",
+    href: "JacobTangResume.pdf",
     description: "View my experience",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

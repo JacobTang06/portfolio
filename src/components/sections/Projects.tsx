@@ -19,7 +19,7 @@ const PROJECTS = [
     tags: ["Python", "FastAPI", "NGINX", "Kafka"],
     year: "2026",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&auto=format",
-    link: "#",
+    link: "architecture-diagram.html",
   },
 ];
 
