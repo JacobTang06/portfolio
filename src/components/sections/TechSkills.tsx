@@ -37,7 +37,7 @@ export default function TechSkills({ id }: TechSkillsProps) {
       <div className="max-w-5xl mx-auto w-full">
         <div className="mb-10 sm:mb-14 md:mb-16">
           <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#4dffc3" }}>
-            04 — Skills & Technology
+            04 — Tech & Skills
           </p>
           <h2
             className="text-3xl sm:text-4xl md:text-5xl leading-tight"
