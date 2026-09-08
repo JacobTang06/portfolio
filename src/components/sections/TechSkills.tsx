@@ -43,8 +43,8 @@ export default function TechSkills({ id }: TechSkillsProps) {
             className="text-3xl sm:text-4xl md:text-5xl leading-tight"
             style={{ fontFamily: '"DM Serif Display", serif', color: "#e8edf5" }}
           >
-            What{" "}
-            <em style={{ color: "#4dffc3" }}>I use</em>
+            How{" "}
+            <em style={{ color: "#4dffc3" }}>I build</em>
           </h2>
         </div>
 
